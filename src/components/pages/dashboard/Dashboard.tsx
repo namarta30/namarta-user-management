@@ -37,7 +37,7 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <h1 className="text-3xl text-center mt-5">User Data</h1>
-      <div className='grid grid-cols-4 gap-8 mt-5'>
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mt-5'>
         {loading ? (
           <p>Loading...</p>
         ) : error ? (
@@ -45,8 +45,11 @@ const Dashboard: React.FC = () => {
         ) : users.length > 0 ? (
           users.map((user: User) => (
             <div key={user.id} className="shadow rounded p-4">
-              <Image imageUrl={user.avatar} widthData="80%" />
-              <p>{user.first_name}</p>
+              <div className='m-auto w-[90%] '>
+
+              <Image imageUrl={user.avatar} widthData="100%" />
+              </div>
+              <p className='mt-3'>{user.first_name}</p>
               <p>{user.email}</p>
             </div>
           ))

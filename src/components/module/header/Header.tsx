@@ -9,9 +9,9 @@ const Header = () => {
         navigate("/signIn")
       };
   return (
-    <div className="py-3 px-6 shadow-sm flex justify-between items-center">
-    <p className='text-center text-4xl text-zinc-800'>User Managment Dashboard </p>
-     <p className='text-blue-600 cursor' onClick={()=>signOut()}>Logout</p>   
+    <div className="py-3 px-6 shadow-sm flex justify-between items-center bg-zinc-800 text-white">
+    <p className='text-center md:text-4xl text-xl  text-white'>User Managment Dashboard </p>
+     <button className='text-blue-600 cursor bg-white p-2 rounded' onClick={()=>signOut()}>Logout</button>   
   </div>
   )
 }

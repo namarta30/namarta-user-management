@@ -33,7 +33,7 @@ const SignIn = () => {
   };
   return (
     <div>
-      <div className="grid grid-cols-2 gap-8 h-screen ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-screen ">
 
         <Image imageUrl={SignUp} widthData="100%" />
         <div className="bg-blue-800 ">
@@ -41,7 +41,7 @@ const SignIn = () => {
             <p className="text-3xl font-semibold mb-5 text-white"> Welcome TO </p>
             <p className="text-3xl font-semibold mb-5 text-white"> User Management System </p>
 
-            <div className="bg-white-40 shadow-md p-5 rounded w-6/12">
+            <div className="bg-white-40 shadow-md p-5 rounded md:w-6/12 w-[80%]">
               <div className="m-auto w-[50%]">
                 <Image imageUrl={icon2} widthData="90%" />
               </div>

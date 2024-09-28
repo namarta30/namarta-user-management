@@ -39,7 +39,7 @@ const SignUp = () => {
   };
   return (
     <div>
-      <div className="grid grid-cols-2 gap-8 h-screen ">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-8 h-screen ">
 
         <Image imageUrl={Sign} widthData="100%" />
         <div className="bg-blue-800 ">
