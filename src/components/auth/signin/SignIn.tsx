@@ -13,6 +13,10 @@ const SignIn = () => {
   const [password, setPassword] = useState('cityslicka');
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
     try {
       const token = await apiLogin(email, password);
       dispatch(login(token));
@@ -55,7 +59,7 @@ const SignIn = () => {
                   Sign In
                 </button>
               </form>
-              <Link to="/signUp"><p className="text-end text-[13px]"><span className="text-zinc-100">No Account? </span> <span className="text-blue-800">Sign up</span></p></Link>
+              <Link to="/signUp"><p className="text-end text-[13px]"><span className="text-zinc-100">No Account? </span> <span className="text-blue-900">Sign up</span></p></Link>
 
 
 

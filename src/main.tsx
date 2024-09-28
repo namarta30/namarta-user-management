@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
+import ErrorPage from './error-page.tsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -9,11 +10,12 @@ import {
 import SignIn from './components/auth/signin/SignIn.tsx';
 import SignUp from './components/auth/signup/SignUp.tsx';
 import Dashboard from './components/pages/dashboard/Dashboard.tsx';
-import ProtectedRoute from './components/ProtectedRoute.tsx';
+import ProtectedRoute from './components/middleware/ProtectedRoute.tsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "",

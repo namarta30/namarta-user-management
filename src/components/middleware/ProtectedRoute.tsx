@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectAuth } from '../redux/reducer/authSlice';
+import { selectAuth } from '../../redux/reducer/authSlice';
 import { Navigate } from 'react-router-dom';
 
 interface ProtectedRouteProps {

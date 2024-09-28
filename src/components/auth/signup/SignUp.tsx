@@ -17,6 +17,11 @@ const SignUp = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const { email, password, name } = formData;
+    if (!email || !password || !name) {
+      alert("Please fill in all fields.");
+      return;
+    }
     try {
       const token = await apiLogin(formData.email, formData.password);
       dispatch(login(token));
@@ -63,7 +68,7 @@ const SignUp = () => {
                   Sign Up
                 </button>
               </form>
-              <Link to="/signIn"><p className="text-end text-[13px]"><span className="text-zinc-100">Have Account? </span> <span className="text-blue-800">Sign in</span></p></Link>
+              <Link to="/signIn"><p className="text-end text-[13px]"><span className="text-zinc-100">Have Account? </span> <span className="text-blue-900">Sign in</span></p></Link>
 
 
 
