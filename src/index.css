@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-white-40{
+   background-color:  #ffffff40;
+}
+.cursor{
+    cursor: pointer;
+}
