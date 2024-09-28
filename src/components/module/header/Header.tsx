@@ -6,7 +6,7 @@ const Header = () => {
     const navigate=useNavigate();
     const signOut = () => {
         dispatch(logout());
-        navigate("/signIn")
+        navigate("/signIn");
       };
   return (
     <div className="py-3 px-6 shadow-sm flex justify-between items-center bg-zinc-800 text-white">
